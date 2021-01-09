@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
     //creanos una variable de la clase button
     Button btnnavegar, btncompatir;
     @Override
@@ -30,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 intent.setType("text/plain");
                 /*Lanzamos las opciones y el titulo */
                 startActivity(Intent.createChooser(intent, "Compartir con ")); }});
-
 
         //instanciamos al boton con el id del control de la vista
         btnnavegar=(Button)findViewById(R.id.boton_navegacion);
