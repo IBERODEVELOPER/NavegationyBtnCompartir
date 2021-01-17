@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     //creanos una variable de la clase button
@@ -38,10 +39,19 @@ public class MainActivity extends AppCompatActivity {
         btnnavegar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //El brindamos la direccón URL a Uri y lo guardamos en una variable
-                Uri uriUrl = Uri.parse("https://mpersonales.blogspot.pe/");
+               /* primera forma indicando una url
+               //El brindamos la direccón URL a Uri y lo guardamos en una variable
+               Uri uriUrl = Uri.parse("https://mpersonales.blogspot.pe/");
                 // lanzamos la actividad con Intent.ACTION_VIEW  y los pasamos la ruta uriurl
                 Intent intent = new Intent(Intent.ACTION_VIEW, uriUrl);
+                /*Iniciamos la accion
+                startActivity(intent);*/
+                /*Segunda forma con el EditText*/
+                EditText editText= (EditText) findViewById(R.id.urlEditText);
+                //convertimos a string
+                String uriweb= editText.getText().toString();
+                //indicamos el intento y la url
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uriweb));
                 /*Iniciamos la accion*/
                 startActivity(intent);
             }});

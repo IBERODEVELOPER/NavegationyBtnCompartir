@@ -29,12 +29,25 @@
         android:layout_width="169dp"
         android:layout_height="46dp"
         android:layout_marginStart="123dp"
-        android:layout_marginTop="290dp"
         android:layout_marginEnd="119dp"
         android:layout_marginBottom="64dp"
         android:background="#C0CA33"
         android:text="Compartir"
         app:layout_constraintBottom_toTopOf="@+id/boton_navegacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/urlEditText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/urlEditText"
+        android:layout_width="235dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="188dp"
+        android:ems="10"
+        android:hint="Copie un link"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
